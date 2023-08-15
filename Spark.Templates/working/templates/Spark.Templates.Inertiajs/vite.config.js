@@ -3,11 +3,6 @@ import vue from "@vitejs/plugin-vue";
 import appsettings from "./appsettings.json";
 import path from "path";
 
-// Pattern for CSS files
-const cssPattern = /\.css$/;
-// Pattern for image files
-const imagePattern = /\.(png|jpe?g|gif|svg|webp|avif)$/;
-
 export default defineConfig({
   plugins: [
     vue({
