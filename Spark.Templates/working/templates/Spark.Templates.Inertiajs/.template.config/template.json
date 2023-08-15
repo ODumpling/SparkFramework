@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Spark",
+  "classifications": ["Web", "MVC", "Spark", "Inertiajs"],
+  "identity": "Spark.Inertia",
+  "name": "Spark.NET Web MVC (Inertiajs)",
+  "description": "A project template for creating a Spark web app with ASP.NET MVC and Inertiajs. Provides a starting point for MVC Inertiajs apps with database and user auth out of the box.",
+  "shortName": "sparkinertia",
+  "sourceName": "Spark.Templates.Inertiajs",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {
+    "Css": {
+      "type": "parameter",
+      "datatype": "choice",
+      "defaultValue": "Tailwind",
+      "choices": [
+        {
+          "choice": "Tailwind",
+          "description": "Tailwind CSS"
+        }
+      ]
+    },
+    "IsTailwind": {
+      "type": "computed",
+      "value": "(Css == \"Tailwind\")"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [".vs/**"]
+        }
+      ]
+    }
+  ],
+  "SpecialCustomOperations": {
+    "**/*.razor": {
+      "operations": [
+        {
+          "type": "conditional",
+          "configuration": {
+            "if": ["//#if"],
+            "else": ["//#else"],
+            "elseif": ["//#elseif"],
+            "endif": ["//#endif"],
+            "trim": true,
+            "wholeLine": true,
+            "evaluator": "C++"
+          }
+        }
+      ]
+    },
+    "**/*.html": {
+      "operations": [
+        {
+          "type": "conditional",
+          "configuration": {
+            "if": ["//#if"],
+            "else": ["//#else"],
+            "elseif": ["//#elseif"],
+            "endif": ["//#endif"],
+            "trim": true,
+            "wholeLine": true,
+            "evaluator": "C++"
+          }
+        }
+      ]
+    },
+    "**/*.cshtml": {
+      "operations": [
+        {
+          "type": "conditional",
+          "configuration": {
+            "if": ["//#if"],
+            "else": ["//#else"],
+            "elseif": ["//#elseif"],
+            "endif": ["//#endif"],
+            "trim": true,
+            "wholeLine": true,
+            "evaluator": "C++"
+          }
+        }
+      ]
+    },
+    "**/*.css": {
+      "operations": [
+        {
+          "type": "conditional",
+          "configuration": {
+            "if": ["//#if"],
+            "else": ["//#else"],
+            "elseif": ["//#elseif"],
+            "endif": ["//#endif"],
+            "trim": true,
+            "wholeLine": true,
+            "evaluator": "C++"
+          }
+        }
+      ]
+    }
+  }
+}
